@@ -7,7 +7,7 @@ body {
 }
 
 .nav-link {
-  @apply font-semibold px-3;
+  @apply font-semibold px-2 xl:px-3;
 }
 
 .nav-link:hover {

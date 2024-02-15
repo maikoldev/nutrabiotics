@@ -7,11 +7,11 @@ import SearchIcon from "@/assets/icons/search.svg";
 
 export default function Navbar() {
   return (
-    <div className="h-24 container mx-auto grid grid-cols-12 content-center py-3">
-      <div className="col-span-4">
+    <div className="h-20 md:h-24 container mx-auto grid grid-cols-12 content-center py-3">
+      <div className="col-span-6 lg:col-span-3 xl:col-span-4">
         <Image src={logoImage} alt="Logo Header" width={230} />
       </div>
-      <nav className="text-purple col-span-6 flex items-center">
+      <nav className=" text-purple col-span-7 xl:col-span-6 hidden lg:flex items-center justify-end">
         <ul className="flex gap-3 font-semibold">
           <li className="nav-link">
             <a href="#">Inicio</a>
@@ -33,7 +33,7 @@ export default function Navbar() {
           </li>
         </ul>
       </nav>
-      <div className="col-span-2 flex items-center justify-end gap-6">
+      <div className="col-span-6 lg:col-span-2 flex items-center justify-end gap-6">
         <button>
           <Image src={MenuIcon} alt="Menu Icon" />
         </button>

@@ -14,7 +14,7 @@ export default function ProductsGrid({ products = [] }) {
               height={300}
               className="object-cover w-full h-[350px] mx-auto rounded-2xl mb-4"
             />
-            <h2 className="text-2xl font-extrabold uppercase line-clamp-1">
+            <h2 className="text-xl md:text-2xl font-extrabold uppercase line-clamp-1">
               {product.title.slice(0, 10)} ®
             </h2>
             <div className="internal-box">
