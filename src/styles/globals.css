@@ -18,28 +18,6 @@ body {
   @apply font-black underline;
 }
 
-.btn-flat.yellow {
-  background: linear-gradient(95.83deg, #bb8123 1.42%, #c8bb72 100%);
-  @apply text-white;
-}
-
-.btn-flat.yellow:hover {
-  background: linear-gradient(95.83deg, #e4cfad 1.42%, #f7f1d3 100%);
-  @apply text-dark-grey;
-}
-
-.btn-outline {
-  @apply border;
-}
-
-.btn-outline.purple {
-  @apply border-purple bg-white;
-}
-
-.btn-outline.purple:hover {
-  @apply bg-purple text-white;
-}
-
 .product-card {
   background: linear-gradient(128.42deg, #ece9f4 -3.93%, #f9f6ff 104.89%);
   border-radius: 20px;

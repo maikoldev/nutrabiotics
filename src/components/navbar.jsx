@@ -11,7 +11,7 @@ export default function Navbar() {
       <div className="col-span-6 lg:col-span-3 xl:col-span-4">
         <Image src={logoImage} alt="Logo Header" width={230} />
       </div>
-      <nav className=" text-purple col-span-7 xl:col-span-6 hidden lg:flex items-center justify-end">
+      <nav className="text-purple col-span-7 xl:col-span-6 hidden lg:flex items-center justify-end">
         <ul className="flex gap-3 font-semibold">
           <li className="nav-link">
             <a href="#">Inicio</a>
