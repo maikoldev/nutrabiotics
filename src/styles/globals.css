@@ -38,3 +38,12 @@ body {
 .product-card:hover .internal-box {
   @apply opacity-100 transition-opacity duration-300;
 }
+
+#events-slider .swiper-pagination .swiper-pagination-bullet {
+  background-color: #ffffff;
+  opacity: 0.5;
+}
+
+#events-slider .swiper-pagination .swiper-pagination-bullet-active {
+  opacity: 1;
+}

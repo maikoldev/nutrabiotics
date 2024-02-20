@@ -1,4 +1,5 @@
 import { Mulish } from "next/font/google";
+import 'swiper/css/bundle';
 import "@/styles/globals.css";
 
 import Navbar from "@/components/navbar";
@@ -17,7 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es" className={mulish.className}>
-      <body>
+      <body className="text-normal">
         <TopNavbar />
         <Navbar />
         <main>

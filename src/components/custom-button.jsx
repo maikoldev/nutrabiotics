@@ -15,15 +15,15 @@ const CustomButton = ({
   switch (color) {
     case 'yellow-gradient':
       flatClass = 'bg-yellow-gradient text-white hover:bg-yellow-gradient-hover hover:text-[#4A494A]';
-      outlineClass = 'border-gold text-gold hover:bg-yellow-gradient hover:text-white hover:border-transparent';
+      outlineClass = 'border border-gold text-gold hover:bg-yellow-gradient hover:text-white hover:border-transparent';
       break;
     case 'dark-blue':
       flatClass = 'bg-dark-blue text-white hover:bg-[#A2A8C9]';
-      outlineClass = 'border-dark-blue text-dark-blue hover:bg-dark-blue hover:text-white hover:border-transparent';
+      outlineClass = 'border border-dark-blue text-dark-blue hover:bg-dark-blue hover:text-white hover:border-transparent';
       break;
     case 'purple':
       flatClass = 'bg-purple text-white hover:bg-[#A396B3]';
-      outlineClass = 'border-purple text-purple hover:bg-purple hover:text-white hover:border-transparent';
+      outlineClass = 'border border-purple text-purple hover:bg-purple hover:text-white hover:border-transparent';
       break;
   }
 
@@ -31,7 +31,7 @@ const CustomButton = ({
 
   const className = classNames({
     [`${variantClass}`]: true,
-    'py-[10px] px-6 md:text-xl font-bold rounded-full border': true,
+    'py-[10px] px-6 md:text-xl font-bold rounded-full': true,
     'w-full': block,
   });
 

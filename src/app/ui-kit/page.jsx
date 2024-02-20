@@ -1,4 +1,4 @@
-import CustomBtn from "@/components/custom-button";
+import CustomButton from "@/components/custom-button";
 import CustomInput from "@/components/custom-input";
 
 export default function UiKit() {
@@ -18,17 +18,17 @@ export default function UiKit() {
             <div>
               <h3 className="text-normal font-bold mb-3">Botón Flat</h3>
               <div className="grid grid-cols-3 gap-6">
-                <CustomBtn>Descubre más</CustomBtn>
-                <CustomBtn color="dark-blue">Descubre más</CustomBtn>
-                <CustomBtn color="purple">Descubre más</CustomBtn>
+                <CustomButton>Descubre más</CustomButton>
+                <CustomButton color="dark-blue">Descubre más</CustomButton>
+                <CustomButton color="purple">Descubre más</CustomButton>
               </div>
             </div>
             <div>
               <h3 className="text-normal font-bold mb-3">Botón Outline</h3>
               <div className="grid grid-cols-3 gap-6">
-                <CustomBtn variant="outline">Descubre más</CustomBtn>
-                <CustomBtn variant="outline" color="dark-blue">Descubre más</CustomBtn>
-                <CustomBtn variant="outline" color="purple">Descubre más</CustomBtn>
+                <CustomButton variant="outline">Descubre más</CustomButton>
+                <CustomButton variant="outline" color="dark-blue">Descubre más</CustomButton>
+                <CustomButton variant="outline" color="purple">Descubre más</CustomButton>
               </div>
             </div>
           </div>
