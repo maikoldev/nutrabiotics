@@ -47,3 +47,13 @@ body {
 #events-slider .swiper-pagination .swiper-pagination-bullet-active {
   opacity: 1;
 }
+
+#products-slider .swiper-slide-prev .card,
+#products-slider .swiper-slide-next .card {
+  background: none;
+}
+
+#products-slider .swiper-slide-prev .card .content,
+#products-slider .swiper-slide-next .card .content {
+  display: none;
+}

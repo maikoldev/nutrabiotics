@@ -13,12 +13,15 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ['Mulish', 'sans-serif'],
+      'mulish': "var(--font-mulish)",
+      'inter': "var(--font-inter)",
     },
     extend: {
       backgroundImage: {
         'yellow-gradient': 'linear-gradient(96deg, #BB8123 3%, #C8BB72 100%)',
         'yellow-gradient-hover': 'linear-gradient(96deg, #E4CFAD 1.5%, #F7F1D3 100%)',
+        'neuromorphism': 'linear-gradient(130deg, rgba(115, 53, 128, 0.07) -4%, rgba(115, 53, 128, 0.03) 105%)',
+        'yellow-gradientx': 'linear-gradient(92deg, #C8BB72 50%, #BB8123 97%)',
       },
       colors: {
         // primary
@@ -41,13 +44,13 @@ module.exports = {
         DEFAULT: '0px 4px 22px 0px rgba(0, 0, 0, 0.25)',
       },
       fontSize: {
-        'title': ['4rem', {
+        'title': ['4.5rem', {
           lineHeight: '1',
-          fontWeight: '700',
+          fontWeight: '800',
         }],
         'subtitle': ['3rem', {
           lineHeight: '1',
-          fontWeight: '700',
+          fontWeight: '800',
         }],
         'subtitle-sm': ['1.5rem', {
           lineHeight: '2rem',
