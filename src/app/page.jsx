@@ -95,7 +95,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="bg-[#311650] text-white relative min-h-screen grid place-content-center">
+      <section className="bg-dark-purple text-white relative min-h-screen grid place-content-center">
         <Image src={BannerHome} fill alt="Banner Home" className="object-cover object-bottom" />
         <div className="text-center z-10">
           <h1 className="text-title text-[64px] uppercase leading-tight mb-6">Bien-Estar para <br /> latinoamérica</h1>
@@ -104,7 +104,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#311650] text-white py-20">
+      <section className="bg-dark-purple text-white py-20">
         <div className="container mx-auto grid grid-cols-3 grid-rows-2 gap-6">
           {blogs.map((blog, index) => (
             <div key={`blog-${index}`} className={`col-span-${index == 0 ? '1 row-span-2' : '2'}`}>
@@ -114,7 +114,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#311650] text-white py-20 pb-80">
+      <section className="bg-dark-purple text-white py-20 pb-80">
         <div className="container mx-auto">
           <h2 className="text-title text-center mb-8">
             <span className="text-subtitle">Nuestros</span> <br /> Eventos

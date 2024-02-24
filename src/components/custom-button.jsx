@@ -8,6 +8,8 @@ const CustomButton = ({
   href = null,
   to = null,
   variant = 'flat',
+  type = 'button',
+  className = '',
 }) => {
   let flatClass = '';
   let outlineClass = '';
@@ -25,11 +27,16 @@ const CustomButton = ({
       flatClass = 'bg-purple text-white hover:bg-[#A396B3]';
       outlineClass = 'border border-purple text-purple hover:bg-purple hover:text-white hover:border-transparent';
       break;
+    case 'white':
+      flatClass = 'bg-white text-purple border border-transparent hover:bg-transparent hover:text-white hover:border-white';
+      outlineClass = 'border border-white text-white hover:bg-white hover:text-purple hover:border-transparent';
+      break;
   }
 
   const variantClass = variant === 'outline' ? outlineClass : flatClass;
 
-  const className = classNames({
+  const newClassName = classNames({
+    [`${className}`]: true,
     [`${variantClass}`]: true,
     'py-[10px] px-12 md:text-xl font-bold rounded-full': true,
     'w-full': block,
@@ -40,7 +47,7 @@ const CustomButton = ({
       {(href || to) ? (
         <Link href={href || to}>{children}</Link>
       ) : (
-        <button className={className}>{children}</button>
+        <button className={newClassName} type={type}>{children}</button>
       )}
     </>
   );

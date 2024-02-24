@@ -2,6 +2,7 @@ import { Mulish, Inter } from "next/font/google";
 import 'swiper/css/bundle';
 import "@/styles/globals.css";
 
+import CustomFooter from "@/components/layouts/CustomFooter";
 import Navbar from "@/components/navbar";
 import TopNavbar from "@/components/top-navbar";
 
@@ -29,12 +30,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es" className={`${mulish.variable} ${inter.variable}`}>
-      <body className="text-normal font-mulish">
+      <body className="text-base md:text-normal font-mulish">
         <TopNavbar />
         <Navbar />
         <main>
           {children}
         </main>
+        <CustomFooter />
       </body>
     </html>
   );
