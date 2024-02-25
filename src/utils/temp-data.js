@@ -79,6 +79,16 @@ export const products = [
   },
 ]
 
+export const partners = [
+  require('@/assets/partners/ilumina.png'),
+  require('@/assets/partners/AMF.png'),
+  require('@/assets/partners/CLAM.png'),
+  require('@/assets/partners/biomolec.png'),
+  require('@/assets/partners/alivia.png'),
+  require('@/assets/partners/farmacia-funcional.png'),
+  require('@/assets/partners/fundanatura.png'),
+];
+
 export const testimonials = [
   {
     author: "Javier Meneses",

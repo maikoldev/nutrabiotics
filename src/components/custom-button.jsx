@@ -38,7 +38,7 @@ const CustomButton = ({
   const newClassName = classNames({
     [`${className}`]: true,
     [`${variantClass}`]: true,
-    'py-[10px] px-12 md:text-xl font-bold rounded-full': true,
+    'py-[10px] px-12 md:text-xl font-semibold md:font-bold rounded-full transition': true,
     'w-full': block,
   });
 

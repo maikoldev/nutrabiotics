@@ -27,21 +27,55 @@ body {
   @apply opacity-100 transition-opacity duration-300;
 }
 
-#events-slider .swiper-pagination .swiper-pagination-bullet {
-  background-color: #ffffff;
-  opacity: 0.5;
+#events-slider {
+  .swiper-pagination {
+    .swiper-pagination-bullet {
+      @apply bg-white opacity-50;
+    }
+
+    .swiper-pagination-bullet-active {
+      @apply opacity-100;
+    }
+  }
 }
 
-#events-slider .swiper-pagination .swiper-pagination-bullet-active {
-  opacity: 1;
+#contents-slider,
+#testimonials-slider,
+#products-slider  {
+  .swiper-pagination {
+    @apply md:hidden;
+
+    .swiper-pagination-bullet {
+      @apply bg-purple opacity-50;
+    }
+
+    .swiper-pagination-bullet-active {
+      @apply opacity-100;
+    }
+  }
 }
 
-#products-slider .swiper-slide-prev .card,
-#products-slider .swiper-slide-next .card {
-  background: none;
+#products-slider {
+  .swiper-slide-prev,
+  .swiper-slide-next {
+    .card {
+      background: none;
+
+      .content {
+        display: none;
+      }
+    }
+  }
 }
 
-#products-slider .swiper-slide-prev .card .content,
-#products-slider .swiper-slide-next .card .content {
-  display: none;
+.text-title {
+  @apply max-md:text-[40px];
+}
+
+.text-subtitle {
+  @apply max-md:text-[24px];
+}
+
+.text-normal-md {
+  @apply max-md:text-[20px] max-md:font-normal;
 }
