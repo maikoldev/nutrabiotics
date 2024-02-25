@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import LogoImage from "@/assets/logo-header.png";
 
@@ -12,15 +13,16 @@ import MagnifyingGlassIcon from "@/components/icons/MagnifyingGlassIcon";
 import DropMenu from "@/components/layouts/DropMenu";
 
 const navigation = [
-  { name: 'Inicio', href: '#' },
-  { name: 'Nosotros', href: '#' },
-  { name: 'Descubre', href: '#' },
-  { name: 'Productos', href: '#' },
-  { name: 'Educación', href: '#' },
-  { name: 'Calidad', href: '#' },
+  { name: 'Inicio', href: '/' },
+  { name: 'Nosotros', href: '/about-us' },
+  { name: 'Descubre', href: '/discover' },
+  { name: 'Productos', href: '/products' },
+  { name: 'Educación', href: '/education' },
+  { name: 'Calidad', href: '/quality' },
 ]
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -34,8 +36,8 @@ export default function Navbar() {
       <nav className="text-purple col-span-8 lg:col-span-6 hidden md:flex items-center justify-center lg:justify-end">
         <ul className="flex gap-3 lg:gap-6 xl:gap-10 font-semibold">
           {navigation.map((item, index) => (
-            <li className="text-base font-semibold hover:font-black hover:underline" key={`item-${index}`}>
-              <Link href={item.href}>{item.name}</Link>
+            <li className="text-base font-semibold hover:font-black hover:underline transition" key={`item-${index}`}>
+              <Link className={pathname == item.href ? 'font-black underline' : ''} href={item.href}>{item.name}</Link>
             </li>
           ))}
         </ul>
