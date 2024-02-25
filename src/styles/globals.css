@@ -6,18 +6,6 @@ body {
   @apply text-purple;
 }
 
-.nav-link {
-  @apply font-semibold px-2 xl:px-3;
-}
-
-.nav-link:hover {
-  @apply underline;
-}
-
-.nav-link-active {
-  @apply font-black underline;
-}
-
 .product-card {
   background: linear-gradient(128.42deg, #ece9f4 -3.93%, #f9f6ff 104.89%);
   border-radius: 20px;

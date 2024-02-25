@@ -11,7 +11,7 @@ import PhoneIcon from "@/components/icons/PhoneIcon";
 import YoutubeIcon from "@/assets/icons/youtube.png"
 
 import CustomButton from "@/components/custom-button";
-import FooterTitle from "@/components/layouts/FooterTitle";
+import LayoutTitle from "@/components/layouts/LayoutTitle";
 
 const CustomFooter = () => {
   return (
@@ -19,7 +19,7 @@ const CustomFooter = () => {
       <footer className="bg-dark-purple text-white py-8">
         <div className="container mx-auto">
           <div className="flex max-md:flex-col md:justify-between items-center gap-8 mb-8">
-            <Image src={LogoDark} alt="Logo Footer" width={230} quality={100} />
+            <Image src={LogoDark} alt="Logo Footer" className="w-[230px]" quality={100} />
             <div className="flex gap-4">
               <a href="#">
                 <Image src={FacebookIcon} alt="Facebook" />
@@ -40,7 +40,7 @@ const CustomFooter = () => {
 
           <div className="grid justify-center md:grid-cols-2 lg:grid-cols-12 gap-8 py-6">
             <div className="max-lg:hidden lg:col-span-2">
-              <FooterTitle>Compañía</FooterTitle>
+              <LayoutTitle>Compañía</LayoutTitle>
               <ul className="text-base leading-loose">
                 <li>
                   <Link href="#">Inicio</Link>
@@ -58,7 +58,7 @@ const CustomFooter = () => {
             </div>
 
             <div className="max-lg:hidden lg:col-span-2">
-              <FooterTitle>Atención</FooterTitle>
+              <LayoutTitle>Atención</LayoutTitle>
               <ul className="text-base leading-loose">
                 <li>
                   <Link href="#">PQRS</Link>
@@ -73,7 +73,7 @@ const CustomFooter = () => {
             </div>
 
             <div className="max-lg:hidden lg:col-span-2">
-              <FooterTitle>De interés</FooterTitle>
+              <LayoutTitle>De interés</LayoutTitle>
               <ul className="text-base leading-loose">
                 <li>
                   <Link href="#">Encuentra tu médico</Link>
@@ -88,7 +88,7 @@ const CustomFooter = () => {
             </div>
 
             <div className="max-md:text-center lg:col-span-3 xl:col-span-4">
-              <FooterTitle>Contact center</FooterTitle>
+              <LayoutTitle>Contact center</LayoutTitle>
               <div className="flex max-md:flex-col md:gap-3">
                 <PhoneIcon className="w-6 max-md:mx-auto mb-3 md:mt-1" />
                 <p className="text-sm md:text-base leading-loose mb-4">
@@ -114,7 +114,7 @@ const CustomFooter = () => {
 
             <div className="max-md:text-center lg:col-span-3 xl:col-span-2 md:flex flex-col items-end">
               <div>
-                <FooterTitle>Suscríbete</FooterTitle>
+                <LayoutTitle>Suscríbete</LayoutTitle>
                 <form action="" className="flex flex-col gap-4 w-[220px]">
                   <input
                     type="text"

@@ -3,8 +3,8 @@ import 'swiper/css/bundle';
 import "@/styles/globals.css";
 
 import CustomFooter from "@/components/layouts/CustomFooter";
-import Navbar from "@/components/navbar";
-import TopNavbar from "@/components/top-navbar";
+import Navbar from "@/components/layouts/Navbar";
+import TopNavbar from "@/components/layouts/TopNavbar";
 
 const mulish = Mulish({
   display: "swap",
