@@ -17,18 +17,13 @@ import ChevronLeftIcon from "@/components/icons/ChevronLeftIcon";
 import ChevronRightIcon from "@/components/icons/ChevronRightIcon";
 
 import App1 from "@/assets/home-app-1.png"
-import AuroraBottomImg from "@/assets/aurora-bottom.png"
-import AuroraBottomResImg from "@/assets/aurora-bottom-res.png"
 import AuroraImg from "@/assets/aurora.png"
 import AuroraRotateImg from "@/assets/aurora-rotate.png"
 import AuroraRotateResImg from "@/assets/aurora-rotate-res.png"
-import AuroraSplashBottomImg from "@/assets/aurora-splash-bottom.png"
-import AuroraSplashBottomResImg from "@/assets/aurora-splash-bottom-res.png"
 import AuroraSplashImg from "@/assets/aurora-splash.png"
 import BannerHome from "@/assets/banner-home.png"
 import Flower2Img from "@/assets/flower-2.png"
 import FlowerImg from "@/assets/flower.png"
-
 
 export default function Home() {
   useEffect(() => {
@@ -258,14 +253,6 @@ export default function Home() {
           Aquí termina esta página, pero inicia un viaje <br />
           hacia el bienestar y el conocimiento profundo de tu naturaleza.
         </p>
-        <div className="relative bottom-[-75px] md:hidden">
-          <Image src={AuroraSplashBottomResImg} className="w-full" alt="Aurora Splah Bottom" />
-          <Image src={AuroraBottomResImg} className="absolute w-full translate-y-[-61%]" alt="Aurora Bottom" />
-        </div>
-        <div className="relative translate-y-[32%] max-md:hidden">
-          <Image src={AuroraSplashBottomImg} className="w-full" alt="Aurora Splah Bottom" />
-          <Image src={AuroraBottomImg} className="absolute w-full translate-y-[-71%]" alt="Aurora Bottom" />
-        </div>
       </section>
     </>
   );

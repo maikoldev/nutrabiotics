@@ -2,23 +2,13 @@ import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
 import { Listbox, Transition } from '@headlessui/react';
 
+import { attentionNav, interestNav, mainNav } from '@/utils/navigation'
+
 import ChevronDownIcon from '@/components/icons/ChevronDownIcon';
 import MexicoFlag from "@/components/flags/MexicoFlag";
 import XMarkIcon from "../icons/XMarkIcon";
 
 import LayoutTitle from "@/components/layouts/LayoutTitle";
-
-const attentionNav = [
-  { name: "PQRS", href: "#" },
-  { name: "Políticas", href: "#" },
-  { name: "Calidad y certificados", href: "#" },
-];
-
-const interestNav = [
-  { name: "Encuentra tu médico", href: "#" },
-  { name: "Puntos de venta", href: "#" },
-  { name: "Factura electrónica", href: "#" },
-];
 
 const langs = [
   { name: 'Español', code: 'es' },
@@ -30,7 +20,7 @@ const countries = [
   { name: 'Colombia', code: 'CO', flag: 'MexicoFlag' },
 ];
 
-const DropMenu = ({ items, setIsOpen, ...props }) => {
+const DropMenu = ({ setIsOpen, ...props }) => {
   useEffect(() => {
     const body = document.querySelector("body");
     body.style.overflow = "hidden";
@@ -83,7 +73,7 @@ const DropMenu = ({ items, setIsOpen, ...props }) => {
       </div>
 
       <ul className="text-center mb-3">
-        {items.map((item, index) => (
+        {mainNav.map((item, index) => (
           <li className="py-3" key={`item-${index}`}>
             <Link href={item.href}>{item.name}</Link>
           </li>
@@ -111,7 +101,7 @@ const DropMenu = ({ items, setIsOpen, ...props }) => {
       <div className="w-[140px] mx-auto">
         <Listbox value={selectedLang} onChange={setSelectedLang}>
           <Listbox.Button className="w-full flex items-center justify-between gap-2 rounded-full border border-white/50 py-[6px] px-3">
-            <span className="block pl-1 truncate text-sm uppercase underline">{selectedLang.name}</span>
+            <span className="block pl-1 truncate text-small uppercase underline">{selectedLang.name}</span>
             <ChevronDownIcon aria-hidden="true" />
           </Listbox.Button>
           <Transition
@@ -125,7 +115,7 @@ const DropMenu = ({ items, setIsOpen, ...props }) => {
                 <Listbox.Option
                   key={`${lang}-${index}`}
                   value={lang}
-                  className={({ active }) => `truncate text-sm uppercase py-1 ${active ? 'underline' : ''}`}
+                  className={({ active }) => `truncate text-small uppercase py-1 ${active ? 'underline' : ''}`}
                 >
                   {lang.name}
                 </Listbox.Option>

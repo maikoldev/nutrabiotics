@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { footerNav, attentionNav, interestNav } from '@/utils/navigation'
+
 import LogoDark from "@/assets/logo-dark.png";
 
 import CalendarIcon from "@/components/icons/CalendarIcon";
@@ -13,9 +15,22 @@ import YoutubeIcon from "@/assets/icons/youtube.png"
 import CustomButton from "@/components/custom-button";
 import LayoutTitle from "@/components/layouts/LayoutTitle";
 
+import AuroraBottomImg from "@/assets/aurora-bottom.png"
+import AuroraBottomResImg from "@/assets/aurora-bottom-res.png"
+import AuroraSplashBottomImg from "@/assets/aurora-splash-bottom.png"
+import AuroraSplashBottomResImg from "@/assets/aurora-splash-bottom-res.png"
+
 const CustomFooter = () => {
   return (
     <>
+      <div className="relative translate-y-[22%] md:hidden -z-10">
+        <Image src={AuroraSplashBottomResImg} className="w-full" alt="Aurora Splah Bottom" />
+        <Image src={AuroraBottomResImg} className="absolute w-full translate-y-[-62%]" alt="Aurora Bottom" />
+      </div>
+      <div className="relative translate-y-[32%] max-md:hidden -z-10">
+        <Image src={AuroraSplashBottomImg} className="w-full" alt="Aurora Splah Bottom" />
+        <Image src={AuroraBottomImg} className="absolute w-full translate-y-[-71%]" alt="Aurora Bottom" />
+      </div>
       <footer className="bg-dark-purple text-white py-8">
         <div className="container mx-auto">
           <div className="flex max-md:flex-col md:justify-between items-center gap-8 mb-8">
@@ -42,48 +57,33 @@ const CustomFooter = () => {
             <div className="max-lg:hidden lg:col-span-2">
               <LayoutTitle>Compañía</LayoutTitle>
               <ul className="text-base leading-loose">
-                <li>
-                  <Link href="#">Inicio</Link>
-                </li>
-                <li>
-                  <Link href="#">Nosotros</Link>
-                </li>
-                <li>
-                  <Link href="#">Contáctanos</Link>
-                </li>
-                <li>
-                  <Link href="#">Trabaja con nosotros</Link>
-                </li>
+                {footerNav.map((item, index) => (
+                  <li key={`footer-${index}`}>
+                    <Link href={item.href}>{item.name}</Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
             <div className="max-lg:hidden lg:col-span-2">
               <LayoutTitle>Atención</LayoutTitle>
               <ul className="text-base leading-loose">
-                <li>
-                  <Link href="#">PQRS</Link>
-                </li>
-                <li>
-                  <Link href="#">Políticas</Link>
-                </li>
-                <li>
-                  <Link href="#">Calidad y certificados</Link>
-                </li>
+                {attentionNav.map((item, index) => (
+                  <li key={`attention-${index}`}>
+                    <Link href={item.href}>{item.name}</Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
             <div className="max-lg:hidden lg:col-span-2">
               <LayoutTitle>De interés</LayoutTitle>
               <ul className="text-base leading-loose">
-                <li>
-                  <Link href="#">Encuentra tu médico</Link>
-                </li>
-                <li>
-                  <Link href="#">Puntos de venta</Link>
-                </li>
-                <li>
-                  <Link href="#">Factura electrónica</Link>
-                </li>
+                {interestNav.map((item, index) => (
+                  <li key={`interest-${index}`}>
+                    <Link href={item.href}>{item.name}</Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
@@ -91,7 +91,7 @@ const CustomFooter = () => {
               <LayoutTitle>Contact center</LayoutTitle>
               <div className="flex max-md:flex-col md:gap-3">
                 <PhoneIcon className="w-6 max-md:mx-auto mb-3 md:mt-1" />
-                <p className="text-sm md:text-base leading-loose mb-4">
+                <p className="text-small md:text-base leading-loose mb-4">
                   Bogotá: 601 443 0900 <br />
                   Cali: 602 380 8906 <br />
                   Medellín: 604 283 6948
@@ -99,7 +99,7 @@ const CustomFooter = () => {
               </div>
               <div className="flex max-md:flex-col md:gap-3">
                 <CalendarIcon className="w-6 max-md:mx-auto mb-3 md:mt-1" />
-                <p className="text-sm md:hidden leading-loose">
+                <p className="text-small md:hidden leading-loose">
                   Lunes a viernes <br />
                   8:00 AM a 6:00 PM <br />
                   Sábados <br />
@@ -138,7 +138,7 @@ const CustomFooter = () => {
           </div>
         </div>
       </footer>
-      <div className="bg-dark-blue text-white text-sm font-semibold py-5">
+      <div className="bg-dark-blue text-white text-small font-semibold py-5">
         <div className="container mx-auto text-center flex max-md:flex-col md:flex-row-reverse justify-between items-center gap-2">
           <Link href="#">Términos y condiciones</Link>
           <p>Copyright © 2023. Todos los derechos reservados</p>
