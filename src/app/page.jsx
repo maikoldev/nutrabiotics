@@ -9,6 +9,7 @@ import { blogs, events, products, partners, contents, testimonials } from "@/uti
 import BlogCard from "@/components/shared/BlogCard";
 import ContentCard from "@/components/shared/ContentCard";
 import CustomButton from "@/components/custom-button";
+import CustomVideo from "@/components/shared/CustomVideo";
 import EventCard from "@/components/shared/EventCard";
 import ProductsSlider from "@/components/home/ProductsSlider";
 import TestimonialCard from "@/components/shared/TestimonialCard";
@@ -94,7 +95,8 @@ export default function Home() {
   return (
     <>
       <section className="bg-dark-purple text-white relative min-h-screen grid place-content-center">
-        <Image src={BannerHome} fill alt="Banner Home" className="object-cover object-bottom" />
+        {/* <Image src={BannerHome} fill alt="Banner Home" className="object-cover object-bottom" /> */}
+        <CustomVideo className="absolute w-full h-full object-cover object-bottom" src="https://nutrapp.surge.sh/videos/video.mp4" autoplay muted loop />
         <div className="container mx-auto text-center z-10">
           <h1 className="text-[32px] md:text-[64px] font-extrabold uppercase leading-tight mb-6">Bien-Estar para <br /> latinoamérica</h1>
           <p className="text-small md:text-normal-md font-medium md:font-bold mb-10">

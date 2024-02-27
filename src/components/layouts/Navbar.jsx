@@ -21,7 +21,9 @@ export default function Navbar() {
   return (
     <div className="h-20 md:h-24 container mx-auto grid grid-cols-12 content-center py-3">
       <div className="col-span-6 md:col-span-3 lg:col-span-4">
-        <Image src={LogoImage} alt="Logo Header" className="w-[115px] md:w-[160px] lg:w-[230px]" quality={100} />
+        <Link href="/">
+          <Image src={LogoImage} alt="Logo Header" className="w-[115px] md:w-[160px] lg:w-[230px]" quality={100} />
+        </Link>
       </div>
 
       {isOpen && <DropMenu setIsOpen={setIsOpen} />}
@@ -37,7 +39,7 @@ export default function Navbar() {
       </nav>
 
       <div className="col-span-6 md:col-span-1 lg:col-span-2 flex items-center justify-end gap-4 lg:gap-6">
-        <button onClick={() => setIsOpen(true)}>
+        <button className="md:hidden" onClick={() => setIsOpen(true)}>
           <BarsIcon className="text-purple" />
         </button>
         <button className="max-md:hidden">
