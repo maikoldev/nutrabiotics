@@ -123,7 +123,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-8 pb-20">
+      <section className="py-8">
         <div className="container mx-auto">
           <h2 className="text-title text-center mb-10">
             <span className="text-subtitle">Un sueño</span> <br /> Hecho realidad

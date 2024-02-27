@@ -27,7 +27,7 @@ const CustomFooter = () => {
         <Image src={AuroraSplashBottomResImg} className="w-full" alt="Aurora Splah Bottom" />
         <Image src={AuroraBottomResImg} className="absolute w-full translate-y-[-62%]" alt="Aurora Bottom" />
       </div>
-      <div className="relative translate-y-[32%] max-md:hidden -z-10">
+      <div className="relative translate-y-[32%] max-md:hidden -z-10 overflow-hidden pt-[6.5rem]">
         <Image src={AuroraSplashBottomImg} className="w-full" alt="Aurora Splah Bottom" />
         <Image src={AuroraBottomImg} className="absolute w-full translate-y-[-71%]" alt="Aurora Bottom" />
       </div>

@@ -253,7 +253,7 @@ export default function Home() {
           </div>
           <div className="swiper-pagination"></div>
         </div>
-        <div className="container mx-auto mb-20">
+        <div className="container mx-auto">
           <p className="subtitle-sm md:text-[32px] text-center leading-tight">
             Aquí termina esta página, pero inicia un viaje <br className="max-md:hidden" />
             hacia el bienestar y el conocimiento profundo de tu naturaleza.
