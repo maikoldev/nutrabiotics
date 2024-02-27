@@ -40,8 +40,8 @@ const DropMenu = ({ setIsOpen, ...props }) => {
           <Listbox value={selectedCountry} onChange={setSelectedCountry}>
             <div className="relative">
               <Listbox.Button className="w-full flex items-center justify-between gap-2 rounded-full border border-white/50 py-[6px] px-2">
-                {selectedCountry.code == 'MX' && <MexicoFlag />}
-                {selectedCountry.code == 'CO' && <MexicoFlag />}
+                {selectedCountry.code == 'MX' && <MexicoFlag className="rounded-full" />}
+                {selectedCountry.code == 'CO' && <MexicoFlag className="rounded-full" />}
                 <ChevronDownIcon aria-hidden="true" />
               </Listbox.Button>
               <Transition
@@ -57,8 +57,8 @@ const DropMenu = ({ setIsOpen, ...props }) => {
                       value={country}
                       className={({ active }) => `flex items-center gap-2 ${active ? 'underline' : ''}`}
                     >
-                      {country.code == 'MX' && <MexicoFlag />}
-                      {country.code == 'CO' && <MexicoFlag />}
+                      {country.code == 'MX' && <MexicoFlag className="rounded-full" />}
+                      {country.code == 'CO' && <MexicoFlag className="rounded-full" />}
                       {country.code}
                     </Listbox.Option>
                   ))}

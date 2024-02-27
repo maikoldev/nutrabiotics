@@ -10,6 +10,7 @@ const CustomButton = ({
   variant = 'flat',
   type = 'button',
   className = '',
+  fontSize = '',
 }) => {
   let flatClass = '';
   let outlineClass = '';
@@ -38,14 +39,15 @@ const CustomButton = ({
   const newClassName = classNames({
     [`${className}`]: true,
     [`${variantClass}`]: true,
-    'py-[10px] px-12 md:text-xl font-semibold md:font-bold rounded-full transition': true,
-    'w-full': block,
+    [`${fontSize ? fontSize : 'md:text-xl'}`]: true,
+    'py-[10px] px-12 font-semibold md:font-bold rounded-full transition': true,
+    'block w-full text-center': block,
   });
 
   return (
     <>
       {(href || to) ? (
-        <Link href={href || to}>{children}</Link>
+        <Link className={newClassName} href={href || to}>{children}</Link>
       ) : (
         <button className={newClassName} type={type}>{children}</button>
       )}

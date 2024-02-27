@@ -121,7 +121,7 @@ const CustomFooter = () => {
                     placeholder="Ingresa tu e-mail"
                     className="bg-transparent text-base border rounded-full border-white text-white placeholder:text-white py-[6px] px-6 text-center outline-none"
                   />
-                  <CustomButton type="submit" color="white" className="md:text-base md:font-bold py-[6px]">
+                  <CustomButton type="submit" color="white" className="md:font-bold py-[6px]" fontSize="md:text-base">
                     Suscribirme
                   </CustomButton>
                 </form>

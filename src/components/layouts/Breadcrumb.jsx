@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Breadcrumb = ({ variant = 'light', items = [] }) => {
   return (
-    <div className={`md:text-xl font-bold ${variant === 'light' ? 'text-[#BBBBBB]' : 'text-white'}`}>
+    <div className={`text-small md:text-xl font-bold ${variant === 'light' ? 'text-[#BBBBBB]' : 'text-white'}`}>
       {items.map((item, index) => (
         <span key={`breadcrumb-item-${item.text}`}>
           {item.href ? (
