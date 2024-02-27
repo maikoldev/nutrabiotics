@@ -58,8 +58,8 @@ const ProductsSlider = ({ products }) => {
         <div className="swiper-pagination"></div>
       ) : (
         <>
-          <ChevronLeftIcon className="swiper-button-prev text-violet/50 hover:text-violet left-[15%] top-[85%]" />
-          <ChevronRightIcon className="swiper-button-next text-violet/50 hover:text-violet right-[15%] top-[85%]" />
+          <ChevronLeftIcon className="swiper-button-prev text-violet opacity-50 hover:text-violet hover:opacity-100 left-[15%] top-[85%]" />
+          <ChevronRightIcon className="swiper-button-next text-violet opacity-50 hover:text-violet hover:opacity-100 right-[15%] top-[85%]" />
         </>
       )}
     </div>

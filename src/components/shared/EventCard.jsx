@@ -1,4 +1,4 @@
-import CustomButton from "../custom-button";
+import CustomButton from "@/components/custom-button";
 
 const EventCard = ({ date, description, title }) => {
   const day = new Date(date).getDate();
@@ -12,13 +12,13 @@ const EventCard = ({ date, description, title }) => {
           <span className="block text-[38px]">{month}</span>
         </h3>
       </div>
-      <div className="col-span-12 lg:col-span-10 bg-white rounded-lg p-10 md:p-6">
-        <div className="grid grid-cols-12 items-center gap-6">
-          <div className="col-span-12 lg:col-span-8 max-lg:text-center">
+      <div className="col-span-12 lg:col-span-10 bg-white rounded-lg py-6 px-4 sm:px-6 md:p-6">
+        <div className="grid-cols-12 flex flex-col lg:grid items-center gap-6">
+          <div className="lg:col-span-8 max-lg:text-center">
             <h3 className="text-normal font-black mb-2">{title}</h3>
             <p className="text-base md:text-normal leading-tight line-clamp-2">{description}</p>
           </div>
-          <div className="col-span-12 lg:col-span-4 justify-self-center">
+          <div className="lg:col-span-4 justify-self-center">
             <CustomButton>Conoce más</CustomButton>
           </div>
         </div>

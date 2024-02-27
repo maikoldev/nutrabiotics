@@ -95,9 +95,9 @@ export default function Home() {
     <>
       <section className="bg-dark-purple text-white relative min-h-screen grid place-content-center">
         <Image src={BannerHome} fill alt="Banner Home" className="object-cover object-bottom" />
-        <div className="text-center z-10">
-          <h1 className="text-title text-[64px] uppercase leading-tight mb-6">Bien-Estar para <br /> latinoamérica</h1>
-          <p className="text-normal-md font-bold mb-10">
+        <div className="container mx-auto text-center z-10">
+          <h1 className="text-[32px] md:text-[64px] font-extrabold uppercase leading-tight mb-6">Bien-Estar para <br /> latinoamérica</h1>
+          <p className="text-small md:text-normal-md font-medium md:font-bold mb-10">
             Con fórmulas, servicios y conocimientos en <br className="max-md:hidden" /> medicina funcional para despertar tu naturaleza
           </p>
           <CustomButton>Descubre más</CustomButton>
@@ -107,7 +107,7 @@ export default function Home() {
       <section className="bg-dark-purple text-white py-4 md:py-20">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-3 md:gap-6">
           {blogs.map((blog, index) => (
-            <div key={`blog-${index}`} className={`md:col-span-${index == 0 ? '1 row-span-2' : '2'}`}>
+            <div key={`blog-${index}`} className={`${index == 0 ? 'md:col-span-1 row-span-2' : 'md:col-span-2'}`}>
               <BlogCard {...blog} />
             </div>
           ))}
@@ -135,15 +135,15 @@ export default function Home() {
       </section>
 
       <section className="relative pb-20">
-        <div className="relative bottom-[80px] translate-y-[-16%] pb-10">
+        <div className="relative translate-y-[-27%] pb-10">
           <Image src={AuroraSplashImg} className="w-full" alt="Aurora Splah" />
           <Image src={AuroraImg} className="absolute translate-y-[-70%] w-full" alt="Aurora" />
           <Image src={AuroraImg} className="absolute translate-y-[-70%] w-full" alt="Aurora" />
         </div>
         <div className="w-full md:w-11/12 mx-auto relative max-md:overflow-hidden">
-          <Image src={FlowerImg} className="max-md:w-[300px] max-lg:w-[350px] absolute top-[5px] md:top-[-30px] lg:top-[-100px] -right-12 md:-right-6 lg:-right-16" alt="Flower" />
-          <h2 className="text-subtitle text-purple lg:ml-28 mb-12">
-            <span className="ml-12">Nuestros</span> <br /> <span className="text-title text-[96px]">Productos</span>
+          <Image src={FlowerImg} className="max-md:w-[270px] absolute top-[5px] md:top-[-30px] lg:top-[-100px] right-0 translate-x-[40px] lg:translate-x-[65px]" alt="Flower" />
+          <h2 className="text-subtitle text-purple max-md:text-center lg:ml-28 mb-12">
+            <span className="md:ml-12">Nuestros</span> <br /> <span className="text-title md:text-[96px]">Productos</span>
           </h2>
           <ProductsSlider products={products} />
         </div>
@@ -236,9 +236,11 @@ export default function Home() {
       </section>
 
       <section className="relative overflow-hidden">
-        <h2 className="text-title text-center leading-none mb-20">
-          <span className="text-subtitle">En pocas palabras...</span> <br /> Nutrabiotics
-        </h2>
+        <div className="container mx-auto">
+          <h2 className="text-title text-center leading-none mb-20">
+            <span className="text-subtitle">En pocas palabras...</span> <br /> Nutrabiotics
+          </h2>
+        </div>
         <div id="testimonials-slider" className="swiper max-md:px-4 mb-20 md:mb-40">
           <div className="swiper-wrapper max-md:mb-12">
             {testimonials.map((testimonial, index) => (
@@ -249,10 +251,12 @@ export default function Home() {
           </div>
           <div className="swiper-pagination"></div>
         </div>
-        <p className="subtitle-sm md:text-[32px] text-center leading-tight">
-          Aquí termina esta página, pero inicia un viaje <br />
-          hacia el bienestar y el conocimiento profundo de tu naturaleza.
-        </p>
+        <div className="container mx-auto mb-20">
+          <p className="subtitle-sm md:text-[32px] text-center leading-tight">
+            Aquí termina esta página, pero inicia un viaje <br className="max-md:hidden" />
+            hacia el bienestar y el conocimiento profundo de tu naturaleza.
+          </p>
+        </div>
       </section>
     </>
   );
