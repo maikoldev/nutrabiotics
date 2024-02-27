@@ -83,7 +83,7 @@ body {
 }
 
 .text-title {
-  @apply max-md:text-[40px];
+  @apply max-sm:text-[37px] max-md:text-[40px];
 }
 
 .text-subtitle {
