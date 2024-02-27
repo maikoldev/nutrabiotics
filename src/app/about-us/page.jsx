@@ -1,6 +1,7 @@
 'use client'
 
 import Image from "next/image";
+import Link from "next/link";
 import { Disclosure, Transition } from '@headlessui/react'
 import ArrowDownIcon from '@/components/icons/ArrowDownIcon'
 
@@ -55,13 +56,13 @@ export default function Page() {
           <div className="relative rounded-2xl max-sm:aspect-square overflow-hidden mb-6 sm:h-[45vw] xl:h-[36vw]">
             <div className="bg-purple-gradient w-full h-full relative z-10"></div>
             <Image className="w-full h-full object-cover sm:object-top" fill src={FoundersImg} alt="Founders" />
-            <div className="absolute bottom-0 w-full grid grid-cols-3 justify-items-center gap-1 max-xs:px-3 p-4 max-md:text-small font-bold lg:text-subtitle-sm lg:underline text-light-yellow z-10">
-              <span>Benoit Raby</span>
-              <span>Luc Lemaire</span>
-              <span>Javier Galvis</span>
+            <div className="absolute bottom-0 w-full grid grid-cols-3 justify-items-center gap-1 max-xs:px-3 p-4 lg:pb-6 max-md:text-small font-bold lg:text-subtitle-sm text-light-yellow z-10">
+              <Link href="/about-us/our-founders" className="lg:underline hover:no-underline">Benoit Raby</Link>
+              <Link href="/about-us/our-founders" className="lg:underline hover:no-underline">Luc Lemaire</Link>
+              <Link href="/about-us/our-founders" className="lg:underline hover:no-underline">Javier Galvis</Link>
             </div>
           </div>
-          <CustomButton block className="md:hidden">Conoce sus biografías</CustomButton>
+          <CustomButton block className="md:hidden" href="/about-us/our-founders">Conoce sus biografías</CustomButton>
         </div>
       </section>
 
